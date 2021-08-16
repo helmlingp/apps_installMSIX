@@ -6,10 +6,18 @@
 	  Created by:	    Phil Helmling, @philhelmling
 	  Organization:   VMware, Inc.
 	  Filename:       installMSIX.ps1
+		github:         https://github.com/helmlingp/apps_installMSIX
 	.DESCRIPTION
 	  Installs an MSIX or MSIXBUNDLE application from the current folder
   .EXAMPLE
+    Install Command
     powershell.exe -ep bypass -file .\installMSIX.ps1
+
+    When to Call Install Complete (see TestinstallMSIX.ps1 script in same repo)
+    powershell.exe -ep bypass -file .\TestinstallMSIX.ps1 -Package Microsoft.MsixPackagingTool
+
+    Uninstall Command
+    powershell.exe -Command "Get-AppxPackage -AllUsers | Where-Object Name -eq {Microsoft.MsixPackagingTool} | Remove-AppxPackage -AllUsers"
 #>
 
 $current_path = $PSScriptRoot;

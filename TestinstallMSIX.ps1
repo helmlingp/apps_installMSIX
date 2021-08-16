@@ -6,8 +6,9 @@
 	  Created by:	    Phil Helmling, @philhelmling
 	  Organization:   VMware, Inc.
 	  Filename:       TestinstallMSIX.ps1
+    github:         https://github.com/helmlingp/apps_installMSIX
 	.DESCRIPTION
-	  Used as "When to Call Install Complete" Custom Script for MSIX or MSIXBundles.
+	  Used as "When to Call Install Complete" Custom Script for installMSIX.ps1.
     Specify the MSIX Name with -Package parameter
     To determine what the name is, run the following on a machine already installed:
     Get-AppxPackage | Where-Object Name -like {*PACKAGENAME*}
