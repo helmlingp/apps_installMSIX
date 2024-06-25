@@ -24,7 +24,7 @@ param (
 
 $ec = 1
 
-$app = Get-AppPackage -AllUsers | Where-Object {$_.Name -eq $Package}
-write-host $app.Name
+$app = Get-AppPackage -AllUsers | Where-Object {$_.Name -eq $Package} | out-null
+# write-host $app.Name
 if ($app) {$ec = 0}else{$ec = 1}
-return $ec
+exit $ec
